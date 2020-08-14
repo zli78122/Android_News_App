@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/dialogImage"
+        android:layout_width="match_parent"
+        android:layout_height="181dp"/>
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:textSize="18sp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_below="@+id/dialogImage"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="Global leaders send messages of support to Boris Johnson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/dialogHorizontalLine"
+        android:layout_below="@+id/dialogTitle"
+        android:background="#67578c"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"/>
+
+    <ImageView
+        android:id="@+id/dialogTwitter"
+        android:src="@drawable/bluetwitter"
+        android:layout_below="@+id/dialogHorizontalLine"
+        android:layout_alignParentStart="true"
+        android:layout_width="149.25dp"
+        android:layout_height="49dp"/>
+
+    <View
+        android:id="@+id/dialogVerticalLine"
+        android:layout_below="@+id/dialogHorizontalLine"
+        android:layout_toEndOf="@id/dialogTwitter"
+        android:background="#67578c"
+        android:layout_width="1.5dp"
+        android:layout_height="49dp"/>
+
+    <ImageView
+        android:id="@+id/dialogBookmark"
+        android:visibility="gone"
+        android:src="@drawable/ic_bookmark_border_24px"
+        android:layout_below="@+id/dialogHorizontalLine"
+        android:layout_toEndOf="@+id/dialogVerticalLine"
+        android:layout_width="149.25dp"
+        android:layout_height="49dp"/>
+
+    <ImageView
+        android:id="@+id/dialogBookmarkChecked"
+        android:visibility="gone"
+        android:src="@drawable/ic_bookmark_24px"
+        android:layout_below="@+id/dialogHorizontalLine"
+        android:layout_toEndOf="@+id/dialogVerticalLine"
+        android:layout_width="149.25dp"
+        android:layout_height="49dp"/>
+
+</RelativeLayout>

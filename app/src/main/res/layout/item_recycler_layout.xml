@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="#fcfcfc"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemContainer"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/itemImage"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/itemTitle"
+                android:ellipsize="end"
+                android:lines="3"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="15.6sp"
+                android:layout_toEndOf="@+id/itemImage"
+                android:text="Australia coronavirus live news: Scott Morrison gives update on Covid-19 response - latest ovid-19 response - latest"
+                android:layout_width="240dp"
+                android:layout_height="60dp"/>
+
+            <TextView
+                android:id="@+id/itemDate"
+                android:paddingStart="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="#969696"
+                android:textSize="14sp"
+                android:layout_toEndOf="@+id/itemImage"
+                android:layout_alignParentBottom="true"
+                android:text="2m ago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/itemLine"
+                android:layout_marginHorizontal="5dp"
+                android:textStyle="bold"
+                android:paddingBottom="3dp"
+                android:textColor="#3f2186"
+                android:textSize="16sp"
+                android:layout_toEndOf="@+id/itemDate"
+                android:layout_alignParentBottom="true"
+                android:text="|"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/itemSection"
+                android:paddingBottom="5dp"
+                android:textColor="#969696"
+                android:textSize="14sp"
+                android:layout_toEndOf="@+id/itemLine"
+                android:layout_alignParentBottom="true"
+                android:text="World news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/itemBookmark"
+                android:visibility="gone"
+                android:src="@drawable/ic_bookmark_border_24px"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/itemBookmarkChecked"
+                android:visibility="gone"
+                android:src="@drawable/ic_bookmark_24px"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:backgroundTint="#f8f8f8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="59dp">
+
+        <TextView
+            android:id="@+id/headTitle"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:text="NewsApp"
+            android:textColor="#0f0f0f"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/headSearchIcon"
+            android:visibility="visible"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="10dp"
+            android:tint="#000000"
+            app:srcCompat="@drawable/ic_search_24px" />
+
+        <ImageView
+            android:id="@+id/arrowBackIcon"
+            android:visibility="invisible"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/ic_arrow_back_24px" />
+
+        <androidx.appcompat.widget.SearchView
+            android:visibility="gone"
+            android:id="@+id/searchView"
+            android:layout_marginEnd="38dp"
+            android:layout_marginStart="56dp"
+            android:imeOptions="actionSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Home Main -->
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/homeMain"
+        android:layout_above="@+id/footer"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/homeSwipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/weatherCardView"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/weatherImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:id="@+id/weatherCity"
+                            android:letterSpacing="0.01"
+                            android:text="Los Angeles"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginStart="41dp"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/weatherState"
+                            android:letterSpacing="0.01"
+                            android:text="California"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="24dp"
+                            android:layout_marginStart="41dp"
+                            android:textSize="21sp"
+                            android:textStyle="bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/weatherTemperature"
+                            android:letterSpacing="0.01"
+                            android:text="13 ℃"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginStart="290dp"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/weatherSummary"
+                            android:letterSpacing="0.01"
+                            android:text="Clouds"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="24dp"
+                            android:layout_marginStart="299dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:indeterminateTint="#4f2ca5"
+                        android:layout_marginTop="202dp"
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/fetchingNews"
+                        android:layout_marginTop="249dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="Fetching News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <!-- Headlines Main -->
+    <RelativeLayout
+        android:id="@+id/headlinesMain"
+        android:visibility="invisible"
+        android:layout_above="@+id/footer"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/sectionContainer"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/sectionScroll"
+                android:scrollbarSize="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="59dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <Button
+                            android:id="@+id/sectionWorld"
+                            android:minWidth="0dp"
+                            android:paddingHorizontal="12dp"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:textStyle="bold"
+                            android:textColor="#421886"
+                            android:text="WORLD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="59dp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_alignBottom="@+id/sectionWorld"
+                            android:id="@+id/worldBar"
+                            app:cardCornerRadius="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="2dp"
+                            android:backgroundTint="#624289" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <Button
+                            android:id="@+id/sectionBusiness"
+                            android:minWidth="0dp"
+                            android:paddingHorizontal="12dp"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:textStyle="bold"
+                            android:textColor="#421886"
+                            android:text="BUSINESS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="59dp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:visibility="invisible"
+                            android:layout_alignBottom="@+id/sectionBusiness"
+                            android:id="@+id/businessBar"
+                            app:cardCornerRadius="5dp"
+                            android:layout_width="89dp"
+                            android:layout_height="2dp"
+                            android:backgroundTint="#624289" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <Button
+                            android:id="@+id/sectionPolitics"
+                            android:minWidth="0dp"
+                            android:paddingHorizontal="12dp"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:textStyle="bold"
+                            android:textColor="#421886"
+                            android:text="POLITICS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:visibility="invisible"
+                            android:layout_alignBottom="@+id/sectionPolitics"
+                            android:id="@+id/politicsBar"
+                            app:cardCornerRadius="5dp"
+                            android:layout_width="84dp"
+                            android:layout_height="2dp"
+                            android:backgroundTint="#624289" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <Button
+                            android:id="@+id/sectionSport"
+                            android:minWidth="0dp"
+                            android:paddingHorizontal="12dp"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:textStyle="bold"
+                            android:textColor="#421886"
+                            android:text="SPORTS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:visibility="invisible"
+                            android:layout_alignBottom="@+id/sectionSport"
+                            android:id="@+id/sportBar"
+                            app:cardCornerRadius="5dp"
+                            android:layout_width="77dp"
+                            android:layout_height="2dp"
+                            android:backgroundTint="#624289" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <Button
+                            android:id="@+id/sectionTechnology"
+                            android:minWidth="0dp"
+                            android:paddingHorizontal="12dp"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:textStyle="bold"
+                            android:textColor="#421886"
+                            android:text="TECHNOLOGY"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:visibility="invisible"
+                            android:layout_alignBottom="@+id/sectionTechnology"
+                            android:id="@+id/technologyBar"
+                            app:cardCornerRadius="5dp"
+                            android:layout_width="111dp"
+                            android:layout_height="2dp"
+                            android:backgroundTint="#624289" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <Button
+                            android:id="@+id/sectionScience"
+                            android:minWidth="0dp"
+                            android:paddingHorizontal="12dp"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:textStyle="bold"
+                            android:textColor="#421886"
+                            android:text="SCIENCE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:visibility="invisible"
+                            android:layout_alignBottom="@+id/sectionScience"
+                            android:id="@+id/scienceBar"
+                            app:cardCornerRadius="5dp"
+                            android:layout_width="79dp"
+                            android:layout_height="2dp"
+                            android:backgroundTint="#624289" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:visibility="invisible"
+            android:layout_alignBottom="@id/sectionContainer"
+            android:id="@+id/sectionBar"
+            app:cardCornerRadius="5dp"
+            android:layout_width="70dp"
+            android:layout_height="2dp"
+            android:backgroundTint="#624289" />
+
+        <RelativeLayout
+            android:layout_below="@+id/sectionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/headlinesSwipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".MainActivity">
+                </androidx.viewpager.widget.ViewPager>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Trending Main -->
+    <RelativeLayout
+        android:id="@+id/trendingMain"
+        android:visibility="invisible"
+        android:layout_above="@+id/footer"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/trendingInputHint"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Search Term :"/>
+
+        <EditText
+            android:id="@+id/inputChartLine"
+            android:layout_below="@+id/trendingInputHint"
+            android:layout_marginHorizontal="22dp"
+            android:singleLine="true"
+            android:hint="CoronaVirus"
+            android:textColorHint="#9b9b9b"
+            android:imeOptions="actionSend"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:theme="@style/MyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/inputChartLine"
+            android:layout_marginTop="70dp"
+            android:paddingBottom="22dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    <!-- Bookmarks Main -->
+    <RelativeLayout
+        android:id="@+id/bookmarksMain"
+        android:visibility="invisible"
+        android:layout_above="@+id/footer"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bookmarkRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/noBookmark"
+            android:visibility="invisible"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="298dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Bookmarked Articles"/>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="59dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/homeButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/homeNavImage"
+                        android:tint="#5b5b5b"
+                        android:visibility="invisible"
+                        android:layout_marginTop="17dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_home_24px" />
+
+                    <ImageView
+                        android:id="@+id/homeNavImageActive"
+                        android:layout_marginTop="9dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_home_24px" />
+
+                    <TextView
+                        android:id="@+id/homeNavText"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="16sp"
+                        android:textColor="#4a298c"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Home"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/headlinesButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/headlinesNavImage"
+                        android:tint="#5b5b5b"
+                        android:layout_marginTop="17dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/icon_news" />
+
+                    <ImageView
+                        android:id="@+id/headlinesNavImageActive"
+                        android:tint="#4a298c"
+                        android:visibility="invisible"
+                        android:layout_marginTop="9dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/icon_news" />
+
+                    <TextView
+                        android:id="@+id/headlinesNavText"
+                        android:visibility="invisible"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="16sp"
+                        android:textColor="#4a298c"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Headlines"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trendButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/trendNavImage"
+                        android:tint="#5b5b5b"
+                        android:layout_marginTop="17dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_trending_up_24px" />
+
+                    <ImageView
+                        android:id="@+id/trendNavImageActive"
+                        android:tint="#4a298c"
+                        android:visibility="invisible"
+                        android:layout_marginTop="9dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_trending_up_24px" />
+
+                    <TextView
+                        android:id="@+id/trendNavText"
+                        android:visibility="invisible"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="16sp"
+                        android:textColor="#4a298c"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trending"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bookmarkButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/bookmarksNavImage"
+                        android:tint="#5b5b5b"
+                        android:layout_marginTop="17dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_bookmarks_24px" />
+
+                    <ImageView
+                        android:id="@+id/bookmarksNavImageActive"
+                        android:tint="#4a298c"
+                        android:visibility="invisible"
+                        android:layout_marginTop="9dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_bookmarks_24px" />
+
+                    <TextView
+                        android:id="@+id/bookmarksNavText"
+                        android:visibility="invisible"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="16sp"
+                        android:textColor="#4a298c"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bookmarks"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
