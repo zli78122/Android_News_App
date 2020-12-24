@@ -1,98 +1,98 @@
 # Android NewsApp
 ## Tech Stacks
-Volley: http request
-Picasso: powerful image downloading and caching library
-MPAndroidChart: create graph
-Progress Bar
-SearchView and AutoCompleteTextView: search functionality
-Splash Screen: welcome page
-Adding ellipsis to long strings
-Multiple Tabs: ViewPager + Adapter + Fragment
-RecyclerView
-Toast
-Swipe Refresh
-Dialog
+Volley: http request  
+Picasso: powerful image downloading and caching library  
+MPAndroidChart: create graph  
+Progress Bar  
+SearchView and AutoCompleteTextView: search functionality  
+Splash Screen: welcome page  
+Adding ellipsis to long strings  
+Multiple Tabs: ViewPager + Adapter + Fragment  
+RecyclerView  
+Toast  
+Swipe Refresh  
+Dialog  
 
 ## API
-OpenWeatherMap API
-Guardian News API
-Google Trends API
-Microsoft Bing Autosuggest API
+OpenWeatherMap API  
+Guardian News API  
+Google Trends API  
+Microsoft Bing Autosuggest API  
 
 ## 1. Config
-compileSdkVersion 29
-buildToolsVersion "29.0.3"
-minSdkVersion 21
-targetSdkVersion 29
+compileSdkVersion 29  
+buildToolsVersion "29.0.3"  
+minSdkVersion 21  
+targetSdkVersion 29  
 
-Emulator: **_Pixel 2XL_**
+Emulator: **_Pixel 2XL_**  
 
 ## 2. Functionalities
 
 ### 2-1 Splash Activity (Welcome Page)
-①. check, request, and get location permission
-②. after getting location permission, get geographic information, i.e. state and city
-③. request **_OpenWeatherMap API_** to get weather information 
-④. transfer to MainActivity
+①. check, request, and get location permission  
+②. after getting location permission, get geographic information, i.e. state and city  
+③. request **_OpenWeatherMap API_** to get weather information  
+④. transfer to MainActivity  
 
 ### 2-2 MainActivity
 ①. Home
     a. parse weather information
-    b. request **_Guardian News API_** to get latest news
-    c. load RecyclerView and show news list
-    `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`
-    d. show dialog
-    e. check and uncheck bookmark
-    f. transfer to twitter page
-    g. transfer to ArticleDetailActivity
-    h. swipe refresh (SwipeRefreshLayout)
-    i. progress bar
+    b. request **_Guardian News API_** to get latest news  
+    c. load RecyclerView and show news list  
+    `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`  
+    d. show dialog  
+    e. check and uncheck bookmark  
+    f. transfer to twitter page  
+    g. transfer to ArticleDetailActivity  
+    h. swipe refresh (SwipeRefreshLayout)  
+    i. progress bar  
     
 ②. Headlines
-    a. initialize ViewPaper
-    `ViewPaper + FragmentStatePagerAdapter + TabFragment`
-    b. request **_Guardian News API_** to get news by section
-    c. switch sections with animation
-    d. show dialog
-    e. check and uncheck bookmark
-    f. transfer to twitter page
-    g. transfer to ArticleDetailActivity
-    h. swipe refresh (SwipeRefreshLayout)
-    i. progress bar
+    a. initialize ViewPaper  
+    `ViewPaper + FragmentStatePagerAdapter + TabFragment`  
+    b. request **_Guardian News API_** to get news by section  
+    c. switch sections with animation  
+    d. show dialog  
+    e. check and uncheck bookmark  
+    f. transfer to twitter page  
+    g. transfer to ArticleDetailActivity  
+    h. swipe refresh (SwipeRefreshLayout)  
+    i. progress bar  
     
 ③. Trending
-    a. request **_Google Trends API_** to get trending data
-    b. draw and show Line Chart by **_MPAndroidChart_**
+    a. request **_Google Trends API_** to get trending data  
+    b. draw and show Line Chart by **_MPAndroidChart_**  
     
 ④. Bookmarks
-    a. get bookmark list from SharedPreferences
-    b. load RecyclerView and show bookmark list
-    `RecyclerView + GridLayoutManager + RecyclerViewGridAdapter + GridViewHolder`
-    c. show dialog
-    d. uncheck bookmark
-    e. transfer to twitter page
-    f. transfer to ArticleDetailActivity
+    a. get bookmark list from SharedPreferences  
+    b. load RecyclerView and show bookmark list  
+    `RecyclerView + GridLayoutManager + RecyclerViewGridAdapter + GridViewHolder`  
+    c. show dialog  
+    d. uncheck bookmark  
+    e. transfer to twitter page  
+    f. transfer to ArticleDetailActivity  
     
 ⑤. Search Functionality
-    a. auto suggestions
-    `SearchView + AutoCompleteTextView + ArrayAdapter`
-    b. transfer to SearchResultActivity
+    a. auto suggestions  
+    `SearchView + AutoCompleteTextView + ArrayAdapter`  
+    b. transfer to SearchResultActivity  
     
 ### 2-3 SearchResultActivity
-①. request **_Guardian News API_** to get news by keyword
-②. show dialog
-③. check and uncheck bookmark
-④. transfer to twitter page
-⑤. transfer to ArticleDetailActivity
-⑥. swipe refresh (SwipeRefreshLayout)
-⑦. progress bar
+①. request **_Guardian News API_** to get news by keyword  
+②. show dialog  
+③. check and uncheck bookmark  
+④. transfer to twitter page  
+⑤. transfer to ArticleDetailActivity  
+⑥. swipe refresh (SwipeRefreshLayout)  
+⑦. progress bar  
 
 ### 2-4 ArticleDetailActivity
-①. request **_Guardian News API_** to get the article detail by id
-②. show article detail
-③. check and uncheck bookmark
-④. transfer to twitter page
-⑤. transfer to original article page by accessing article url
+①. request **_Guardian News API_** to get the article detail by id  
+②. show article detail  
+③. check and uncheck bookmark  
+④. transfer to twitter page  
+⑤. transfer to original article page by accessing article url  
 
 ## 3. Data Structure in SharedPreference
 ```
