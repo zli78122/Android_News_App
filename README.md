@@ -1,4 +1,6 @@
 # Android NewsApp
+Video: https://www.youtube.com/watch?v=RA5mbbbszp0
+
 ## Tech Stacks
 **Volley**: http request  
 **Picasso**: powerful image downloading and caching library  
@@ -36,8 +38,8 @@ Emulator: **_Pixel 2XL_**
 ④. transfer to MainActivity  
 
 ### 2-2 MainActivity
-①. Home
-    a. parse weather information
+①. Home  
+    a. parse weather information  
     b. request **_Guardian News API_** to get latest news  
     c. load RecyclerView and show news list  
     `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`  
