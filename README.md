@@ -1,23 +1,23 @@
 # Android NewsApp
 ## Tech Stacks
-Volley: http request  
-Picasso: powerful image downloading and caching library  
-MPAndroidChart: create graph  
-Progress Bar  
-SearchView and AutoCompleteTextView: search functionality  
-Splash Screen: welcome page  
+**Volley**: http request  
+**Picasso**: powerful image downloading and caching library  
+**MPAndroidChart**: create graph  
+**Progress Bar**  
+**SearchView** and **AutoCompleteTextView**: search functionality  
+**Splash Screen**: welcome page  
 Adding ellipsis to long strings  
-Multiple Tabs: ViewPager + Adapter + Fragment  
-RecyclerView  
-Toast  
-Swipe Refresh  
-Dialog  
+Multiple Tabs: **ViewPager** + **Adapter** + **Fragment**  
+**RecyclerView**  
+**Toast**  
+**Swipe Refresh**  
+**Dialog**  
 
 ## API
 OpenWeatherMap API  
 Guardian News API  
 Google Trends API  
-Microsoft Bing Autosuggest API  
+Microsoft Azure Bing Autosuggest API  
 
 ## 1. Config
 compileSdkVersion 29  
