@@ -39,16 +39,16 @@ Emulator: **_Pixel 2XL_**
 
 ### 2-2 MainActivity
 ①. Home  
->a. parse weather information  
->b. request **_Guardian News API_** to get latest news  
->c. load RecyclerView and show news list  
+* a. parse weather information  
+* b. request **_Guardian News API_** to get latest news  
+* c. load RecyclerView and show news list  
     `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`  
->d. show dialog  
->e. check and uncheck bookmark  
->f. transfer to twitter page  
->g. transfer to ArticleDetailActivity  
->h. swipe refresh (SwipeRefreshLayout)  
->i. progress bar  
+* d. show dialog  
+* e. check and uncheck bookmark  
+* f. transfer to twitter page  
+* g. transfer to ArticleDetailActivity  
+* h. swipe refresh (SwipeRefreshLayout)  
+* i. progress bar  
     
 ②. Headlines  
     a. initialize ViewPaper  
@@ -75,7 +75,7 @@ Emulator: **_Pixel 2XL_**
     e. transfer to twitter page  
     f. transfer to ArticleDetailActivity  
     
-⑤. Search Functionality
+⑤. Search Functionality  
     a. auto suggestions  
     `SearchView + AutoCompleteTextView + ArrayAdapter`  
     b. transfer to SearchResultActivity  
