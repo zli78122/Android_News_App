@@ -39,18 +39,18 @@ Emulator: **_Pixel 2XL_**
 
 ### 2-2 MainActivity
 ①. Home  
-    a. parse weather information  
-    b. request **_Guardian News API_** to get latest news  
-    c. load RecyclerView and show news list  
+>a. parse weather information  
+>b. request **_Guardian News API_** to get latest news  
+>c. load RecyclerView and show news list  
     `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`  
-    d. show dialog  
-    e. check and uncheck bookmark  
-    f. transfer to twitter page  
-    g. transfer to ArticleDetailActivity  
-    h. swipe refresh (SwipeRefreshLayout)  
-    i. progress bar  
+>d. show dialog  
+>e. check and uncheck bookmark  
+>f. transfer to twitter page  
+>g. transfer to ArticleDetailActivity  
+>h. swipe refresh (SwipeRefreshLayout)  
+>i. progress bar  
     
-②. Headlines
+②. Headlines  
     a. initialize ViewPaper  
     `ViewPaper + FragmentStatePagerAdapter + TabFragment`  
     b. request **_Guardian News API_** to get news by section  
@@ -62,11 +62,11 @@ Emulator: **_Pixel 2XL_**
     h. swipe refresh (SwipeRefreshLayout)  
     i. progress bar  
     
-③. Trending
+③. Trending  
     a. request **_Google Trends API_** to get trending data  
     b. draw and show Line Chart by **_MPAndroidChart_**  
     
-④. Bookmarks
+④. Bookmarks  
     a. get bookmark list from SharedPreferences  
     b. load RecyclerView and show bookmark list  
     `RecyclerView + GridLayoutManager + RecyclerViewGridAdapter + GridViewHolder`  
