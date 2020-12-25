@@ -39,32 +39,32 @@ Emulator: **_Pixel 2XL_**
 
 ### 2-2 MainActivity
 ①. Home  
-* a. parse weather information  
-* b. request **_Guardian News API_** to get latest news  
-* c. load RecyclerView and show news list  
-    `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`  
-* d. show dialog  
-* e. check and uncheck bookmark  
-* f. transfer to twitter page  
-* g. transfer to ArticleDetailActivity  
-* h. swipe refresh (SwipeRefreshLayout)  
-* i. progress bar  
+* parse weather information  
+* request **_Guardian News API_** to get latest news  
+* load RecyclerView and show news list  
+  `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`  
+* show dialog  
+* check and uncheck bookmark  
+* transfer to twitter page  
+* transfer to ArticleDetailActivity  
+* swipe refresh (SwipeRefreshLayout)  
+* progress bar  
     
 ②. Headlines  
-* a. initialize ViewPaper  
-    `ViewPaper + FragmentStatePagerAdapter + TabFragment`  
-* b. request **_Guardian News API_** to get news by section  
-* c. switch sections with animation  
-* d. show dialog  
-* e. check and uncheck bookmark  
-* f. transfer to twitter page  
-* g. transfer to ArticleDetailActivity  
-* h. swipe refresh (SwipeRefreshLayout)  
-* i. progress bar  
+* initialize ViewPaper  
+  `ViewPaper + FragmentStatePagerAdapter + TabFragment`  
+* request **_Guardian News API_** to get news by section  
+* switch sections with animation  
+* show dialog  
+* check and uncheck bookmark  
+* transfer to twitter page  
+* transfer to ArticleDetailActivity  
+* swipe refresh (SwipeRefreshLayout)  
+* progress bar  
     
 ③. Trending  
-* a. request **_Google Trends API_** to get trending data  
-* b. draw and show Line Chart by **_MPAndroidChart_**  
+* request **_Google Trends API_** to get trending data  
+* draw and show Line Chart by **_MPAndroidChart_**  
     
 ④. Bookmarks  
 * get bookmark list from SharedPreferences  
@@ -76,9 +76,9 @@ Emulator: **_Pixel 2XL_**
 * transfer to ArticleDetailActivity  
     
 ⑤. Search Functionality  
-* a. auto suggestions  
-    `SearchView + AutoCompleteTextView + ArrayAdapter`  
-* b. transfer to SearchResultActivity  
+* auto suggestions  
+  `SearchView + AutoCompleteTextView + ArrayAdapter`  
+* transfer to SearchResultActivity  
     
 ### 2-3 SearchResultActivity
 ①. request **_Guardian News API_** to get news by keyword  
