@@ -1,5 +1,6 @@
 # Android NewsApp
-Video: https://www.youtube.com/watch?v=RA5mbbbszp0
+*Video: https://www.youtube.com/watch?v=RA5mbbbszp0*
+[Video](https://www.youtube.com/watch?v=RA5mbbbszp0 "Video")
 
 ## Tech Stacks
 **Volley**: http request  
@@ -51,34 +52,34 @@ Emulator: **_Pixel 2XL_**
 * i. progress bar  
     
 ②. Headlines  
-    a. initialize ViewPaper  
+* a. initialize ViewPaper  
     `ViewPaper + FragmentStatePagerAdapter + TabFragment`  
-    b. request **_Guardian News API_** to get news by section  
-    c. switch sections with animation  
-    d. show dialog  
-    e. check and uncheck bookmark  
-    f. transfer to twitter page  
-    g. transfer to ArticleDetailActivity  
-    h. swipe refresh (SwipeRefreshLayout)  
-    i. progress bar  
+* b. request **_Guardian News API_** to get news by section  
+* c. switch sections with animation  
+* d. show dialog  
+* e. check and uncheck bookmark  
+* f. transfer to twitter page  
+* g. transfer to ArticleDetailActivity  
+* h. swipe refresh (SwipeRefreshLayout)  
+* i. progress bar  
     
 ③. Trending  
-    a. request **_Google Trends API_** to get trending data  
-    b. draw and show Line Chart by **_MPAndroidChart_**  
+* a. request **_Google Trends API_** to get trending data  
+* b. draw and show Line Chart by **_MPAndroidChart_**  
     
 ④. Bookmarks  
-    a. get bookmark list from SharedPreferences  
-    b. load RecyclerView and show bookmark list  
+* a. get bookmark list from SharedPreferences  
+* b. load RecyclerView and show bookmark list  
     `RecyclerView + GridLayoutManager + RecyclerViewGridAdapter + GridViewHolder`  
-    c. show dialog  
-    d. uncheck bookmark  
-    e. transfer to twitter page  
-    f. transfer to ArticleDetailActivity  
+* c. show dialog  
+* d. uncheck bookmark  
+* e. transfer to twitter page  
+* f. transfer to ArticleDetailActivity  
     
 ⑤. Search Functionality  
-    a. auto suggestions  
+* a. auto suggestions  
     `SearchView + AutoCompleteTextView + ArrayAdapter`  
-    b. transfer to SearchResultActivity  
+* b. transfer to SearchResultActivity  
     
 ### 2-3 SearchResultActivity
 ①. request **_Guardian News API_** to get news by keyword  
