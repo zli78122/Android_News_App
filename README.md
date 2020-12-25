@@ -1,6 +1,5 @@
 # Android NewsApp
 *Video: https://www.youtube.com/watch?v=RA5mbbbszp0*
-[Video](https://www.youtube.com/watch?v=RA5mbbbszp0 "Video")
 
 ## Tech Stacks
 **Volley**: http request  
@@ -68,13 +67,13 @@ Emulator: **_Pixel 2XL_**
 * b. draw and show Line Chart by **_MPAndroidChart_**  
     
 ④. Bookmarks  
-* a. get bookmark list from SharedPreferences  
-* b. load RecyclerView and show bookmark list  
-    `RecyclerView + GridLayoutManager + RecyclerViewGridAdapter + GridViewHolder`  
-* c. show dialog  
-* d. uncheck bookmark  
-* e. transfer to twitter page  
-* f. transfer to ArticleDetailActivity  
+* get bookmark list from SharedPreferences  
+* load RecyclerView and show bookmark list  
+  `RecyclerView + GridLayoutManager + RecyclerViewGridAdapter + GridViewHolder`  
+* show dialog  
+* uncheck bookmark  
+* transfer to twitter page  
+* transfer to ArticleDetailActivity  
     
 ⑤. Search Functionality  
 * a. auto suggestions  
