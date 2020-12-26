@@ -1,13 +1,13 @@
 # Android NewsApp
 *Video: https://www.youtube.com/watch?v=RA5mbbbszp0*
 
-## Introduction
+## 1. Introduction
 * Created a **Splash Screen** requesting location permission to get geographic information and calling OpenWeatherMap API to get weather data.
 * Implemented showing articles with animation, dialog, **progress bar**, and **swipe refresh** via RecyclerView and ViewPager.
 * Completed search functionality and **auto suggestions** via SearchView, AutoCompleteTextView, and ArrayAdapter.
 * Used **Volley** for HTTP request, **Picasso** for downloading and caching images, and **SharedPreferences** for data storage.
 
-## Tech Stacks
+## 2. Tech Stacks
 **Volley**: http request  
 **Picasso**: powerful image downloading and caching library  
 **MPAndroidChart**: create graph  
@@ -21,13 +21,13 @@ Toast
 Swipe Refresh  
 Dialog  
 
-## API
+## 3. API
 OpenWeatherMap API  
 Guardian News API  
 Google Trends API  
 Microsoft Azure Bing Autosuggest API  
 
-## 1. Config
+## 4. Config
 compileSdkVersion 29  
 buildToolsVersion "29.0.3"  
 minSdkVersion 21  
@@ -35,15 +35,15 @@ targetSdkVersion 29
 
 Emulator: **_Pixel 2XL_**  
 
-## 2. Functionalities
+## 5. Functionalities
 
-### 2-1 Splash Activity (Welcome Page)
+### 5-1 Splash Activity (Welcome Page)
 * check, request, and get location permission  
 * after getting location permission, get geographic information, i.e. state and city  
 * request **_OpenWeatherMap API_** to get weather information  
 * transfer to MainActivity  
 
-### 2-2 MainActivity
+### 5-2 MainActivity
 (1) Home  
 * parse weather information  
 * request **_Guardian News API_** to get latest news  
@@ -86,7 +86,7 @@ Emulator: **_Pixel 2XL_**
   `SearchView + AutoCompleteTextView + ArrayAdapter`  
 * transfer to SearchResultActivity  
 
-### 2-3 SearchResultActivity
+### 5-3 SearchResultActivity
 * request **_Guardian News API_** to get news by keyword  
 * show dialog  
 * check and uncheck bookmark  
@@ -95,39 +95,9 @@ Emulator: **_Pixel 2XL_**
 * swipe refresh (SwipeRefreshLayout)  
 * progress bar  
 
-### 2-4 ArticleDetailActivity
+### 5-4 ArticleDetailActivity
 * request **_Guardian News API_** to get the article detail by id  
 * show article detail  
 * check and uncheck bookmark  
 * transfer to twitter page  
 * transfer to original article page by accessing article url  
-
-## 3. Data Structure in SharedPreference
-```
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<map>
-    <set name="BOOKMARKS_IDS">
-        <string>football/live/2020/may/06/internazionale-v-sampdoria-serie-a-1990-91-live</string>
-        <string>world/live/2020/may/07/coronavirus-live-news-trump-says-covid-19-task-force-to-continue-indefinitely-as-us-china-rift-widens</string>
-        <string>world/live/2020/may/06/coronavirus-update-cases-uk-live-news-us-task-force-trump-covid-19-usa-world-europe-deaths-brazil-brasil-israel</string>
-    </set>
-    <set name="football/live/2020/may/06/internazionale-v-sampdoria-serie-a-1990-91-live">
-        <string>section:Football</string>
-        <string>image:https://media.guim.co.uk/34e21d496b7e5c80871002bcbdd756e2c0cd69a0/0_185_2477_1486/500.jpg</string>
-        <string>title:Internazionale v Sampdoria: Serie A, 1990-91 – live!</string>
-        <string>date:06 May</string>
-    </set>
-    <set name="world/live/2020/may/07/coronavirus-live-news-trump-says-covid-19-task-force-to-continue-indefinitely-as-us-china-rift-widens">
-        <string>section:World news</string>
-        <string>image:https://media.guim.co.uk/1fe97c578f0883d85c51fc27d02a2786f8bddc91/0_213_6000_3600/500.jpg</string>
-        <string>title:Coronavirus live news: Trump says Covid-19 taskforce to continue 'indefinitely' as US-China rift widens</string>
-        <string>date:06 May</string>
-    </set>
-    <set name="world/live/2020/may/06/coronavirus-update-cases-uk-live-news-us-task-force-trump-covid-19-usa-world-europe-deaths-brazil-brasil-israel">
-        <string>section:World news</string>
-        <string>image:https://media.guim.co.uk/03cdefa2bfd37e0cefe32c1ed8392726d9218286/0_37_6620_3970/500.jpg</string>
-        <string>title:Trump suggests more deaths necessary price to reopen economy – as it happened</string>
-        <string>date:06 May</string>
-    </set>
-</map>
-```
