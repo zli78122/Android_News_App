@@ -11,15 +11,15 @@
 **Volley**: http request  
 **Picasso**: powerful image downloading and caching library  
 **MPAndroidChart**: create graph  
-**Progress Bar**  
-**SearchView** and **AutoCompleteTextView**: search functionality  
-**Splash Screen**: welcome page  
+Progress Bar  
+SearchView and AutoCompleteTextView: search functionality  
+Splash Screen: welcome page  
 Adding ellipsis to long strings  
-Multiple Tabs: **ViewPager** + **Adapter** + **Fragment**  
-**RecyclerView**  
-**Toast**  
-**Swipe Refresh**  
-**Dialog**  
+Multiple Tabs: ViewPager + Adapter + Fragment  
+RecyclerView  
+Toast  
+Swipe Refresh  
+Dialog  
 
 ## API
 OpenWeatherMap API  
@@ -44,19 +44,19 @@ Emulator: **_Pixel 2XL_**
 * transfer to MainActivity  
 
 ### 2-2 MainActivity
-* Home  
- + parse weather information  
- + request **_Guardian News API_** to get latest news  
- + load RecyclerView and show news list  
-   `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`  
- + show dialog  
- + check and uncheck bookmark  
- + transfer to twitter page  
- + transfer to ArticleDetailActivity  
- + swipe refresh (SwipeRefreshLayout)  
- + progress bar  
+(1) Home  
+* parse weather information  
+* request **_Guardian News API_** to get latest news  
+* load RecyclerView and show news list  
+  `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`  
+* show dialog  
+* check and uncheck bookmark  
+* transfer to twitter page  
+* transfer to ArticleDetailActivity  
+* swipe refresh (SwipeRefreshLayout)  
+* progress bar  
     
-②. Headlines  
+(2) Headlines  
 * initialize ViewPaper  
   `ViewPaper + FragmentStatePagerAdapter + TabFragment`  
 * request **_Guardian News API_** to get news by section  
@@ -68,11 +68,11 @@ Emulator: **_Pixel 2XL_**
 * swipe refresh (SwipeRefreshLayout)  
 * progress bar  
     
-③. Trending  
+(3) Trending  
 * request **_Google Trends API_** to get trending data  
 * draw and show Line Chart by **_MPAndroidChart_**  
     
-④. Bookmarks  
+(4) Bookmarks  
 * get bookmark list from SharedPreferences  
 * load RecyclerView and show bookmark list  
   `RecyclerView + GridLayoutManager + RecyclerViewGridAdapter + GridViewHolder`  
@@ -81,26 +81,26 @@ Emulator: **_Pixel 2XL_**
 * transfer to twitter page  
 * transfer to ArticleDetailActivity  
     
-⑤. Search Functionality  
+(5) Search Functionality  
 * auto suggestions  
   `SearchView + AutoCompleteTextView + ArrayAdapter`  
 * transfer to SearchResultActivity  
-    
+
 ### 2-3 SearchResultActivity
-①. request **_Guardian News API_** to get news by keyword  
-②. show dialog  
-③. check and uncheck bookmark  
-④. transfer to twitter page  
-⑤. transfer to ArticleDetailActivity  
-⑥. swipe refresh (SwipeRefreshLayout)  
-⑦. progress bar  
+* request **_Guardian News API_** to get news by keyword  
+* show dialog  
+* check and uncheck bookmark  
+* transfer to twitter page  
+* transfer to ArticleDetailActivity  
+* swipe refresh (SwipeRefreshLayout)  
+* progress bar  
 
 ### 2-4 ArticleDetailActivity
-①. request **_Guardian News API_** to get the article detail by id  
-②. show article detail  
-③. check and uncheck bookmark  
-④. transfer to twitter page  
-⑤. transfer to original article page by accessing article url  
+* request **_Guardian News API_** to get the article detail by id  
+* show article detail  
+* check and uncheck bookmark  
+* transfer to twitter page  
+* transfer to original article page by accessing article url  
 
 ## 3. Data Structure in SharedPreference
 ```
