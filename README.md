@@ -1,6 +1,12 @@
 # Android NewsApp
 *Video: https://www.youtube.com/watch?v=RA5mbbbszp0*
 
+## Introduction
+* Created a **Splash Screen** requesting location permission to get geographic information and calling OpenWeatherMap API to get weather data.
+* Implemented showing articles with animation, dialog, **progress bar**, and **swipe refresh** via RecyclerView and ViewPager.
+* Completed search functionality and **auto suggestions** via SearchView, AutoCompleteTextView, and ArrayAdapter.
+* Used **Volley** for HTTP request, **Picasso** for downloading and caching images, and **SharedPreferences** for data storage.
+
 ## Tech Stacks
 **Volley**: http request  
 **Picasso**: powerful image downloading and caching library  
@@ -32,23 +38,23 @@ Emulator: **_Pixel 2XL_**
 ## 2. Functionalities
 
 ### 2-1 Splash Activity (Welcome Page)
-①. check, request, and get location permission  
-②. after getting location permission, get geographic information, i.e. state and city  
-③. request **_OpenWeatherMap API_** to get weather information  
-④. transfer to MainActivity  
+* check, request, and get location permission  
+* after getting location permission, get geographic information, i.e. state and city  
+* request **_OpenWeatherMap API_** to get weather information  
+* transfer to MainActivity  
 
 ### 2-2 MainActivity
-①. Home  
-* parse weather information  
-* request **_Guardian News API_** to get latest news  
-* load RecyclerView and show news list  
-  `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`  
-* show dialog  
-* check and uncheck bookmark  
-* transfer to twitter page  
-* transfer to ArticleDetailActivity  
-* swipe refresh (SwipeRefreshLayout)  
-* progress bar  
+* Home  
+ + parse weather information  
+ + request **_Guardian News API_** to get latest news  
+ + load RecyclerView and show news list  
+   `RecyclerView + LinearLayoutManager + MyRecyclerAdapter + ViewHolder`  
+ + show dialog  
+ + check and uncheck bookmark  
+ + transfer to twitter page  
+ + transfer to ArticleDetailActivity  
+ + swipe refresh (SwipeRefreshLayout)  
+ + progress bar  
     
 ②. Headlines  
 * initialize ViewPaper  
